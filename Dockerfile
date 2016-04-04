@@ -16,7 +16,7 @@ RUN echo "jenkins ALL=(java) NOPASSWD: /bin/bash" >> /etc/sudoers
 RUN echo "jenkins ALL=(root) NOPASSWD: /bin/su - java" >> /etc/sudoers
 
 RUN echo "nobody    ALL=(ALL:ALL) NOPASSWD: /sbin/route" >> /etc/sudoers
-RUN echo "java    ALL=(ALL:ALL) NOPASSWD: /sbin/iptables, /sbin/iptables-save, /sbin/iptables-restore /etc/iptables/rules.v4.backup$
+RUN echo "java    ALL=(ALL:ALL) NOPASSWD: /sbin/iptables, /sbin/iptables-save, /sbin/iptables-restore /etc/iptables/rules.v4.backup" >> /etc/sudoers
 
 RUN chown -R java:java /etc/openvpn/ && mkdir -p /etc/iptables/ && chown -R java:java /etc/iptables/
 
