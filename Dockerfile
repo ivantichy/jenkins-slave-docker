@@ -7,7 +7,11 @@ apt-get install sudo -y -q && \
 apt-get install maven -y -q && \
 apt-get install iptables -y -q && \
 apt-get install openvpn -y -q && \
+apt-get install -y -q openssh-server && \
 rm -rf /var/lib/apt/lists/*
+
+RUN sed -i 's|session    required     pam_loginuid.so|session    optional     pam_loginuid.so|g' /etc/pam.d/sshd
+RUN mkdir -p /var/run/sshd
 
 RUN useradd -d /home/java -m -s /bin/bash java
 RUN useradd -d /home/jenkins -m -s /bin/bash jenkins
