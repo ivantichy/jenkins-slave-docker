@@ -27,11 +27,11 @@ RUN chown -R java:java /etc/openvpn/ && mkdir -p /etc/iptables/ && chown -R java
 # Set password for the jenkins user (you may want to alter this).
 RUN echo "jenkins:jenkins" | chpasswd
 
-COPY runme.sh /runme.sh
+COPY ./runme.sh ./runme.sh
 
-RUN chmod +x /runme.sh
+RUN chmod +x ./runme.sh
 
 # Standard SSH port
 EXPOSE 22
 
-ENTRYPOINT ["/runme.sh"]
+ENTRYPOINT ["./runme.sh"]
