@@ -34,4 +34,4 @@ RUN chmod +x /runme.sh
 # Standard SSH port
 EXPOSE 22
 
-CMD ["/runme.sh"]
+ENTRYPOINT ["/runme.sh"]
