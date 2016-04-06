@@ -8,6 +8,7 @@ apt-get install maven -y -q && \
 apt-get install iptables -y -q && \
 apt-get install openvpn -y -q && \
 apt-get install -y -q openssh-server && \
+apt-get install -y -q curl wget && \
 rm -rf /var/lib/apt/lists/*
 
 RUN sed -i 's|session    required     pam_loginuid.so|session    optional     pam_loginuid.so|g' /etc/pam.d/sshd
