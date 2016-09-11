@@ -8,6 +8,8 @@ chown -R jenkins:jenkins /home/jenkins
 
 #chmod 777 /home/jenkins/workspace
 
+service docker start
+
 /usr/sbin/sshd -D
 
 
