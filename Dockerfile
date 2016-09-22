@@ -10,7 +10,8 @@ apt-get install maven -y -q && \
 apt-get install iptables -y -q && \
 apt-get install openvpn -y -q && \
 apt-get install -y -q openssh-server && \
-apt-get install -y -q curl wget && \
+apt-get install -y -q curl wget  && \
+apt-get install -y -q inotify-tools  && \
 sudo apt-get install -y -q docker-engine && \
 rm -rf /var/lib/apt/lists/*
 
